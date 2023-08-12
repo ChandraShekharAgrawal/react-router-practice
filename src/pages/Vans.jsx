@@ -1,5 +1,5 @@
 const Vans = () => {
-  return <div>Vans</div>;
+  return <div>I'm Van</div>;
 };
 
 export default Vans;
