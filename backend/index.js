@@ -1,11 +1,12 @@
 import express from "express";
 import mongoose from "mongoose";
+import Van from "./vanDataModel.js";
 
 const App = express();
 
 // connect to mongodb
 mongoose
-  .connect("mongodb://127.0.0.1:27017/test", {
+  .connect("mongodb://127.0.0.1:27017/van", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -17,8 +18,14 @@ mongoose
     process.exit(1);
   });
 
-App.get("/", (req, res) => {
-  res.send("Hello");
+App.get("/", async (req, res) => {
+  try {
+    const vans = await Van.find();
+    res.json(vans);
+  } catch (error) {
+    console.error('Error fetching data from "Van" collection:', error);
+    res.status(500).json({ error: "Error fetching data" });
+  }
   console.log("server running");
 });
 
