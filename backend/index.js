@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import Van from "./vanDataModel.js";
+import cors from "cors";
 
 const App = express();
 
@@ -18,6 +19,8 @@ mongoose
     process.exit(1);
   });
 
+App.use(cors());
+
 App.get("/", async (req, res) => {
   try {
     const vans = await Van.find();
@@ -26,7 +29,7 @@ App.get("/", async (req, res) => {
     console.error('Error fetching data from "Van" collection:', error);
     res.status(500).json({ error: "Error fetching data" });
   }
-  console.log("server running");
+  //console.log("server running");
 });
 
 App.listen(5000, () => {
