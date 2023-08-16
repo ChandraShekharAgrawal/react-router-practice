@@ -4,7 +4,7 @@ const vanSchema = new mongoose.Schema({
   id: Number,
   name: String,
   price: Number,
-  desctiption: String,
+  description: String,
   imageUrl: String,
   type: String,
 });

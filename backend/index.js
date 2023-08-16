@@ -32,6 +32,18 @@ App.get("/", async (req, res) => {
   //console.log("server running");
 });
 
+App.get("/:id", async (req, res) => {
+  try {
+    const vanId = req.params.id;
+    const van = await Van.findOne({ id: vanId });
+    res.json(van);
+  } catch (error) {
+    console.error('Error fetching data from "Van" collection:', error);
+    res.status(500).json({ error: "Error fetching data" });
+  }
+  //console.log("server running");
+});
+
 App.listen(5000, () => {
   console.log("listening on port 5000");
 });
