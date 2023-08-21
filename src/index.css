@@ -156,6 +156,60 @@ header a:hover {
   justify-content: space-between;
   width: 250px;
   margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+.hostVans {
+  display: grid;
+  row-gap: 10px;
+}
+
+.hostVan {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  background-color: white;
+  margin-left: 20px;
+}
+
+.hostVanImage {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 100px;
+  width: 100px;
+}
+
+.hostVanDetailImage {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  height: 140px;
+  width: 140px;
+}
+
+.hostVan p {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.hostVanName {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-weight: bold;
+}
+
+.hostVanDetailName {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-weight: bold;
+}
+
+.hostVanPrice {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.hostVanDetailPrice {
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 .footer {
