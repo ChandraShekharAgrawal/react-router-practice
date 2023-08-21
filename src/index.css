@@ -157,6 +157,7 @@ header a:hover {
   width: 250px;
   margin-left: 10px;
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .hostVans {
@@ -210,6 +211,35 @@ header a:hover {
 .hostVanDetailPrice {
   grid-row-start: 3;
   grid-row-end: 4;
+}
+
+.nestedHostVan {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-bottom: 10px;
+}
+
+.hostVanInfo {
+  display: flex;
+  flex-direction: column;
+  color: #161616;
+  font-family: Inter;
+  font-size: 14.355px;
+  font-style: normal;
+  margin-left: 10px;
+}
+
+.hostVanPricing {
+  display: flex;
+  flex-direction: column;
+  color: #161616;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  margin-left: 10px;
 }
 
 .footer {

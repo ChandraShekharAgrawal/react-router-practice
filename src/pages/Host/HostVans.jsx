@@ -24,8 +24,12 @@ const HostVans = () => {
       <h3 style={{ marginLeft: "20px" }}>Your Listed Vans</h3>
       <div className="hostVans">
         {displayVans.map((van) => (
-          <Link to={`/host/vans/${van.id}`} className="no-underline">
-            <div key={van.id} className="hostVan">
+          <Link
+            to={`/host/vans/${van.id}`}
+            key={van.id}
+            className="no-underline"
+          >
+            <div className="hostVan">
               <img src={van.imageUrl} alt={van.name} className="hostVanImage" />
               <p className="hostVanName">{van.name} </p>
               <p className="hostVanPrice">${van.price}/day</p>
