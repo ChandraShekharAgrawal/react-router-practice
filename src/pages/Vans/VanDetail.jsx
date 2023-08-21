@@ -28,7 +28,7 @@ const VanDetail = () => {
           <img src={van.imageUrl} alt={van.name} className="vanImage" />
           <p>{van.name} </p>
           <p>${van.price}/day</p>
-          <p className="van-description">${van.description}</p>
+          <p className="van-description">{van.description}</p>
           {van.type === "simple" ? (
             <p className="simpleType">Simple</p>
           ) : van.type === "rugged" ? (
